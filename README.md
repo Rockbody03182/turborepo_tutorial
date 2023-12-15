@@ -1,11 +1,11 @@
 # TURBOREPO + TRPC + NEXTJS + SHADCN-UI - 2023.12.14
 
 Getting Started  
-전역설치
+`전역설치`
 ```sh
 npm install turbo --global
 ```
-빠른 프로젝트 생성
+`빠른 프로젝트 생성`
 ```sh
 npx create-turbo@latest
 ```
@@ -14,3 +14,12 @@ npx create-turbo@latest
 2개의 질문에 답이 끝나면 설치가 시작된다.
 
 yarn, pnpm 설치는 [turbo.build](https://turbo.build/) 홈페이지에서 참고하시길 바랍니다.
+
+`./apps 디렉토리 위치에 server 디렉토리를 생성하고 trpc를 설치한다.`
+```sh
+npm install @trpc/server @trpc/client express cors
+```
+
+```sh
+ npm install @types/express @types/cors ts-node-dev -D
+```
