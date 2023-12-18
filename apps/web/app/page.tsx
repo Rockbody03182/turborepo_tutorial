@@ -1,14 +1,11 @@
-"use client";
-import Image from "next/image";
-import { Card } from "@repo/ui/card";
-import { Code } from "@repo/ui/code";
-import styles from "./page.module.css";
-import { Button } from "@repo/ui/button";
-import { useState } from "react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { trpc } from "../lib/trpc";
-import { httpBatchLink } from "@trpc/client";
-import Hello from "../components/Hello";
+'use client';
+import styles from './page.module.css';
+import { useState } from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { trpc } from '../lib/trpc';
+import { httpBatchLink } from '@trpc/client';
+import Hello from '../components/Hello';
+import { Button } from '@ui/components/button';
 
 export default function Page(): JSX.Element {
   const [queryClient] = useState(() => new QueryClient());
@@ -28,6 +25,7 @@ export default function Page(): JSX.Element {
       <main className={styles.main}>
         Anything(Qualquer coisa)
         <Hello/>
+        <Button>ola</Button>
       </main>
     </QueryClientProvider>
   </trpc.Provider>
